@@ -48,7 +48,8 @@
 									required
 									type="text"
 									name="first-name"
-									id="first-name" />
+									id="first-name"
+									maxlength="50" />
 							</div>
 
 							<div class="form">
@@ -57,12 +58,17 @@
 									required
 									type="text"
 									name="last-name"
-									id="last-name" />
+									id="last-name"
+									maxlength="50" />
 							</div>
 
 							<div class="form">
 								<label for="email">EMAIL</label>
-								<input type="email" name="email" id="email" />
+								<input
+									type="email"
+									name="email"
+									id="email"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 							</div>
 
 							<div class="form">
@@ -76,11 +82,9 @@
 
 							<div class="form">
 								<label for="password">PASSWORD</label>
-								<input
-									required
-									type="password"
-									name="password"
-									id="password" />
+								<input required type="password" name="password"
+								id="password"
+								pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}""/>
 							</div>
 
 							<div class="form">
@@ -91,7 +95,8 @@
 									required
 									type="password"
 									name="confirm-password"
-									id="confirm-password" />
+									id="confirm-password"
+									pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
 							</div>
 						</form>
 					</section>
