@@ -1,0 +1,224 @@
+@font-face {
+	font-weight: 700;
+	src: url("./assets/Norse-Bold.otf") format("opentype");
+	font-family: "Norse";
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Start styling */
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+}
+
+h1 {
+	font-weight: 700;
+	font-family: "Norse";
+}
+
+.home {
+	display: flex;
+	min-height: 100vh;
+}
+
+.background-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.left {
+	position: relative;
+	width: max(20%, 800px);
+	height: 100vh;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.middle {
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+	padding-top: 1em;
+	padding-right: 16em;
+	padding-bottom: 2em;
+}
+
+.middle > p {
+	margin-bottom: 1em;
+	font-weight: 700;
+	font-size: clamp(1rem, 1.5vw + 1rem, 1.125rem);
+}
+
+.forms {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 100px;
+	row-gap: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-weight: 600;
+	font-size: clamp(0.5rem, 1.5vw + 0.75rem, 1rem);
+	letter-spacing: 2px;
+}
+
+section {
+	padding-left: 40px;
+}
+
+.top p {
+	font-weight: 600;
+	font-size: clamp(1rem, 1.5vw + 1rem, 1.125rem);
+}
+
+.top {
+	margin-top: 6rem;
+	margin-bottom: 32px;
+}
+
+.description-text {
+	width: 53ch;
+	line-height: 1.2;
+}
+
+.highlight {
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+.bottom {
+	margin-top: 2rem;
+}
+
+.create-btn {
+	cursor: pointer;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+	border: none;
+	border-radius: 10px;
+	background-color: #596d48;
+	padding: 0.5em 3em;
+	color: white;
+	font-weight: 600;
+	font-size: clamp(0.75rem, 1.5vw + 1.125rem, 1.5rem);
+}
+
+.register {
+	margin-top: 1.5rem;
+
+	a {
+		color: #596d48;
+		font-weight: bold;
+		text-decoration: none;
+	}
+}
+
+input {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e5e7eb;
+	padding-left: 10px;
+}
+
+input:focus {
+	border-color: blue;
+}
+
+.source {
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	padding-bottom: 1rem;
+
+	& * {
+		color: white;
+	}
+}
+
+.logo {
+	display: flex;
+	position: absolute;
+	top: 25%;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+
+	& .odin-logo {
+		width: 80px;
+		height: auto;
+	}
+
+	& .title {
+		color: white;
+		font-size: 6rem;
+	}
+}
